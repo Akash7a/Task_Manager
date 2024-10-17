@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+
+main {
+    width: 50vw;
+    margin: 50px auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px gray;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: min-content;
+}
+
+main h1 {
+    text-align: center;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main form input,
+textarea {
+    padding: 10px;
+    border: 0;
+    outline: none;
+    box-shadow: 3px 3px 10px gray;
+    resize: none;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+::placeholder {
+    color: black;
+}
+
+main form input[type="submit"] {
+    background-color: rgb(235, 161, 24);
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+main form input[type="submit"]:hover {
+    opacity: 1;
+    transition: all 0.1s linear;
+    cursor: pointer;
+}
+
+.tasks {
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tasks .task {
+    padding: 20px;
+    background-color: cornsilk;
+    box-shadow: 2px 2px 20px gray;
+    border-radius: 10px;
+    position: relative;
+    padding-top: 4.5rem;
+}
+
+.tasks .task .ctrl > button{
+    position: absolute;
+    top: 10px;
+    padding: 0 20px;
+}
+
+.tasks .task .ctrl .delete {
+    border: 0;
+    right: 100px;
+    background-color: transparent;
+    font-size: 30px;
+    text-shadow: 2px 5px 10px gray;
+}
+
+.tasks .task .ctrl .check {
+    right: 0px;
+    text-shadow: 2px 2px 5px gray;
+    background-color: transparent;
+    border: 0;
+    font-size: 30px;
+}
+.edit{
+    right: 50px;
+    background-color: transparent;
+    border: 0;
+    font-size: 30px;
+}
+
+.tasks .task .title_elem {
+    background-color: wheat;
+    padding: 10px;
+    box-shadow: 2px 5px 10px gray;
+    border-radius: 5px;
+}
+
+.tasks .task .desc_elem {
+    background-color: antiquewhite;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 5px 10px gray;
+    border-radius: 5px;
+}
+.tasks .task.completed{
+    text-decoration: line-through;
+    color: blue;
+    font-weight: bold;
+}
+.tasks .no_msg{
+    padding: 20px;
+    text-align: center;
+    background-color: rebeccapurple;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+@media screen and (max-width:1200px) {
+    main {
+        width: 80vw;
+    }
+}
